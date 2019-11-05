@@ -14,9 +14,8 @@ jobs:
         creds: ${{ secrets.SPN }}
 
     - name: Checkout                                                                    
-      uses: actions/checkout@v1                                                           
-
-
+      uses: actions/checkout@v1
+      
     - name: Azure cli
       uses: azure/CLI@v0-beta
       with:
