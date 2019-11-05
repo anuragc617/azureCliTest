@@ -21,4 +21,4 @@ jobs:
         azcliversion: 2.0.68
         inlineScript: |
           chmod +x $GITHUB_WORKSPACE/script.sh |
-          $GITHUB_WORKSPACE/sampleScript.sh anurag
+          $GITHUB_WORKSPACE/script.sh anurag
