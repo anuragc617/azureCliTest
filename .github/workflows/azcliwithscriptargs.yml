@@ -1,9 +1,5 @@
 on: [push]
 
-on:
-  issue_comment:
-    types: [created, deleted]
-
 name: Azure/CLI - the actual repo
 
 jobs:
@@ -13,9 +9,9 @@ jobs:
 
     - uses: azure/login@v1
       with:
-        creds: ${{ secrets.Azure_cred_login_obj }}
+        creds: ${{ secrets.SPN }}
 
-       - name: Checkout                                                                    
+    - name: Checkout                                                                    
       uses: actions/checkout@v1                                                           
 
 
