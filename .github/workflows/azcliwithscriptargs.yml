@@ -11,6 +11,13 @@ jobs:
       with:
         creds: ${{ secrets.SPN }}
 
+    - name: Create ACR
+      id: create-acr
+      run: |
+       echo "::set-output name=username::`az acr credential show -n anu123acr --query username"
+       
     - run: |
-        az acr create -n anu123acr -g  anuragDevOpsaks-rg --sku Basic
+        echo ${{ steps.create-acr.outputs.username }}
+      
+        
         
