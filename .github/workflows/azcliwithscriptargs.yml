@@ -14,7 +14,7 @@ jobs:
     - name: Create ACR
       id: create-acr
       run: |
-       echo "::set-output name=username::`az acr credential show -n anu123acr --query username"
+       echo "::set-output name=username::`az acr credential show -n anu123acr --query username`"
        
     - run: |
         echo ${{ steps.create-acr.outputs.username }}
