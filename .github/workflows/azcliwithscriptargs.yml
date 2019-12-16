@@ -11,10 +11,5 @@ jobs:
       with:
         creds: ${{ secrets.SPN }}
 
-    - name: Azure cli
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          az account show
-          az aks list
+    - run: |
+        az account show 
