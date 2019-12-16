@@ -13,13 +13,9 @@ jobs:
       with:
         creds: ${{ secrets.SPN }}
 
-    - name: Checkout                                                                    
-      uses: actions/checkout@v1
-      
     - name: Azure cli
-      uses: azure/CLI@v0-beta
+      uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.76
+        azcliversion: 2.0.72
         inlineScript: |
-          chmod +x $GITHUB_WORKSPACE/script.sh
-          $GITHUB_WORKSPACE/script.sh anurag
+          az account show
