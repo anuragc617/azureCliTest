@@ -12,4 +12,5 @@ jobs:
         creds: ${{ secrets.SPN }}
 
     - run: |
-        az account show 
+        az acr create -n anu123acr -g  anuragDevOpsaks-rg --sku Basic
+        
