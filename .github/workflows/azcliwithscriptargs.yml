@@ -1,6 +1,6 @@
 on: [push]
 
-name: Azure/CLI - the actual repo
+name: Azure/CLI
 
 jobs:
   build:
