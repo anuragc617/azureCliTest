@@ -1,6 +1,6 @@
 on: [push]
 
-name: Azure/CLI
+name: Azure/CLI1
 
 jobs:
   build:
